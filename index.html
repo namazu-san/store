@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
     <title>Crashando - Assistenza Tecnica e Soluzioni Software</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -47,13 +48,13 @@
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--white);
+            display: flex;
+            align-items: center;
         }
         
-        .logo span {
-            color: var(--primary-green);
+        .logo img {
+            height: 50px; /* Regola questa altezza in base alle dimensioni desiderate per il logo */
+            width: auto;
         }
         
         nav ul {
@@ -490,6 +491,10 @@
         
         /* Responsive */
         @media screen and (max-width: 768px) {
+            .logo img {
+                height: 40px; /* Logo leggermente più piccolo su dispositivi mobili */
+                margin-bottom: 10px;
+            }
             .nav-container {
                 flex-direction: column;
                 gap: 1rem;
@@ -530,7 +535,9 @@
 <body>
     <header>
         <div class="nav-container">
-            <div class="logo">Crash<span>ando</span></div>
+            <div class="logo">
+                <img src="logo.png" alt="Crashando Logo">
+            </div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
